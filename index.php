@@ -3,8 +3,8 @@
  * The land template file
  *
  * @package WordPress
- * @subpackage Crecheem
- * @since Creche Escola Estrelinha Mágica 1.0
+ * @subpackage Link Creative
+ * @since Link Creative 1.0
  */
 ?>
 <!DOCTYPE HTML>

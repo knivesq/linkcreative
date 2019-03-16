@@ -20775,7 +20775,7 @@ function renderRoot(root, isYieldy) {
     tracing.__interactionsRef.current = prevInteractions;
   }
 
-  // We're done performing work. Time to clean up.
+  // We're done performing work. Team to clean up.
   isWorking = false;
   ReactCurrentOwner$2.currentDispatcher = null;
   resetContextDependences();

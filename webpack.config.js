@@ -26,12 +26,12 @@ module.exports = {
             template: __dirname + '/src/index.html',
             filename: 'index.html',
         }),
-        new MiniCssExtractPlugin({
-            filename: "style.css",
-        }),
+        // new MiniCssExtractPlugin({
+        //     filename: "style.css",
+        // }),
         new ManifestPlugin({
             fileName: 'asset-manifest.json', // Not to confuse with manifest.json
-        })
+        }),
         // new BundleAnalyzerPlugin(),
 
         // new sw({
@@ -69,9 +69,9 @@ module.exports = {
         //     },
         //     navigateFallback: '/',
         // }),
-        // new WebpackPlugin([
-        //     { from: 'src/pwa' }, // define the path of the files to be copied
-        // ]),
+        new CopyWebpackPlugin([
+            { from: 'src/pwa' }, // define the path of the files to be copied
+        ]),
         ],
     mode: 'development',
     entry: {
@@ -92,11 +92,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(scss|css)$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'postcss-loader'
-                ]
+                test: /\.(css|scss)$/,
+                loader: ["postcss-loader"]
+
             },
             {
                 test: /\.jsx?$/,

@@ -2,7 +2,7 @@
 /**
  * Enqueue scripts and styles.
  *
- * @since Crecheem 1.0
+ * @since Link Creative 1.0
  */
 
 function crecheem_register_fields() {
